@@ -10,20 +10,24 @@ body {
   background: #f5f3f7;
   color: #333;
   line-height: 1.6;
+  min-height: 100vh;
   display: flex;
-  justify-content: center;
+  flex-direction: column;   /* apila los elementos verticalmente */
+  align-items: center;      /* centra el contenido horizontalmente */
   padding: 40px 20px;
+  gap: 0;
 }
 
+/* ===== Contenedor general (header + main + footer) ===== */
 header, main, footer {
-  max-width: 800px;
+  max-width: 900px;
   width: 100%;
 }
 
-/* ===== Header ===== */
+/* ===== Header (franja morada ancha) ===== */
 header {
   text-align: center;
-  padding: 40px 30px;
+  padding: 60px 30px;
   background: #4a1e6b;
   color: #ffffff;
   border-radius: 14px 14px 0 0;
@@ -31,21 +35,23 @@ header {
 }
 
 header h1 {
-  font-size: 3rem;
+  font-size: 4rem;          /* TÍTULO GRANDE */
   font-weight: 800;
-  letter-spacing: 1px;
-  margin-bottom: 8px;
+  letter-spacing: 2px;
+  margin-bottom: 10px;
+  line-height: 1.1;
 }
 
 .subtitulo {
   color: #d4b8e8;
-  font-size: 1.15rem;
+  font-size: 1.3rem;
+  font-weight: 400;
 }
 
-/* ===== Main ===== */
+/* ===== Main (bloque blanco) ===== */
 main {
   background: #ffffff;
-  padding: 35px 30px;
+  padding: 40px 30px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
 }
 
@@ -67,7 +73,7 @@ main {
 
 .tarjeta:hover {
   transform: translateY(-5px);
-  box-shadow: 0 8px 20px rgba(106, 44, 148, 0.2);
+  box-shadow: 0 8px 20px rgba(106, 44, 148, 0.25);
 }
 
 .tarjeta h2 {
@@ -107,7 +113,7 @@ main {
 /* ===== Footer ===== */
 footer {
   text-align: center;
-  padding: 16px;
+  padding: 20px;
   background: #4a1e6b;
   color: #ffffff;
   border-radius: 0 0 14px 14px;
@@ -115,18 +121,13 @@ footer {
 }
 
 /* =========================================
-   ANIMACIONES
+   ANIMACIONES CONSTANTES Y SUTILES
    ========================================= */
 
+/* Aparición suave al cargar (una vez) */
 @keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(25px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+  from { opacity: 0; transform: translateY(25px); }
+  to   { opacity: 1; transform: translateY(0); }
 }
 
 @keyframes fadeIn {
@@ -134,98 +135,87 @@ footer {
   to   { opacity: 1; }
 }
 
-@keyframes pulse {
-  0%, 100% { transform: scale(1); }
-  50%      { transform: scale(1.05); }
-}
-
-@keyframes float {
+/* Animaciones continuas */
+@keyframes floatSoft {
   0%, 100% { transform: translateY(0); }
-  50%      { transform: translateY(-6px); }
+  50%      { transform: translateY(-4px); }
 }
 
-/* Animaciones aplicadas */
+@keyframes glowPulse {
+  0%, 100% { box-shadow: 0 0 0 rgba(106, 44, 148, 0); }
+  50%      { box-shadow: 0 0 22px rgba(106, 44, 148, 0.35); }
+}
+
+@keyframes borderFlow {
+  0%   { border-left-color: #6a2c94; }
+  50%  { border-left-color: #b57edc; }
+  100% { border-left-color: #6a2c94; }
+}
+
+@keyframes shimmer {
+  0%   { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+/* Aplicación */
+
+/* Header: entrada + brillo sutil constante */
+header {
+  animation: fadeInUp 0.8s ease-out both,
+             glowPulse 4s ease-in-out infinite;
+}
+
 header h1 {
-  animation: fadeInUp 0.8s ease-out both;
+  animation: fadeInUp 0.9s ease-out both;
 }
 
 .subtitulo {
-  animation: fadeInUp 0.8s ease-out 0.2s both;
+  animation: fadeInUp 1s ease-out 0.2s both;
 }
 
+/* Tarjetas: entrada escalonada + flotación constante */
 .tarjeta {
-  animation: fadeInUp 0.8s ease-out both;
+  animation: fadeInUp 0.8s ease-out both,
+             floatSoft 5s ease-in-out infinite,
+             borderFlow 6s ease-in-out infinite;
 }
 
-.tarjeta:nth-child(1) { animation-delay: 0.3s; }
-.tarjeta:nth-child(2) { animation-delay: 0.5s; }
-
-.tarjeta:hover h2 {
-  animation: pulse 0.6s ease-in-out infinite;
+.tarjeta:nth-child(1) {
+  animation-delay: 0.3s, 0.3s, 0s;
 }
 
+.tarjeta:nth-child(2) {
+  animation-delay: 0.5s, 0.8s, 1.5s;
+}
+
+.tarjeta h2 {
+  background: linear-gradient(
+    90deg,
+    #4a1e6b 0%,
+    #b57edc 50%,
+    #4a1e6b 100%
+  );
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shimmer 6s linear infinite;
+}
+
+/* Contacto: entrada + leve pulso */
 .contacto {
   animation: fadeIn 1s ease-out 0.7s both;
 }
 
+.contacto li {
+  animation: floatSoft 6s ease-in-out infinite;
+}
+
+.contacto li:nth-child(1) { animation-delay: 0s; }
+.contacto li:nth-child(2) { animation-delay: 1.2s; }
+
+/* Footer */
 footer {
-  animation: fadeIn 1s ease-out 1s both;
-}
-
-/* =========================================
-   RESPONSIVE
-   ========================================= */
-
-/* Tablets */
-@media (max-width: 768px) {
-  header h1 {
-    font-size: 2.4rem;
-  }
-
-  .tarjetas {
-    grid-template-columns: 1fr;
-    gap: 16px;
-  }
-}
-
-/* Celulares */
-@media (max-width: 480px) {
-  body {
-    padding: 20px 10px;
-  }
-
-  header {
-    padding: 28px 18px;
-    border-radius: 10px 10px 0 0;
-  }
-
-  header h1 {
-    font-size: 1.9rem;
-    letter-spacing: 0.5px;
-  }
-
-  .subtitulo {
-    font-size: 1rem;
-  }
-
-  main {
-    padding: 22px 18px;
-  }
-
-  .tarjeta {
-    padding: 18px;
-  }
-
-  .tarjeta h2 {
-    font-size: 1.1rem;
-  }
-
-  .contacto li {
-    font-size: 0.95rem;
-  }
-
-  footer {
-    border-radius: 0 0 10px 10px;
-    font-size: 0.85rem;
-  }
+  animation: fadeIn 1s ease-out 1s both,
+             glowPulse 5s ease-in-out infinite;
 }
