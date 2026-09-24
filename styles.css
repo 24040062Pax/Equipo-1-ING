@@ -171,3 +171,61 @@ header h1 {
 footer {
   animation: fadeIn 1s ease-out 1s both;
 }
+
+/* =========================================
+   RESPONSIVE
+   ========================================= */
+
+/* Tablets */
+@media (max-width: 768px) {
+  header h1 {
+    font-size: 2.4rem;
+  }
+
+  .tarjetas {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+}
+
+/* Celulares */
+@media (max-width: 480px) {
+  body {
+    padding: 20px 10px;
+  }
+
+  header {
+    padding: 28px 18px;
+    border-radius: 10px 10px 0 0;
+  }
+
+  header h1 {
+    font-size: 1.9rem;
+    letter-spacing: 0.5px;
+  }
+
+  .subtitulo {
+    font-size: 1rem;
+  }
+
+  main {
+    padding: 22px 18px;
+  }
+
+  .tarjeta {
+    padding: 18px;
+  }
+
+  .tarjeta h2 {
+    font-size: 1.1rem;
+  }
+
+  .contacto li {
+    font-size: 0.95rem;
+  }
+
+  footer {
+    border-radius: 0 0 10px 10px;
+    font-size: 0.85rem;
+  }
+}
