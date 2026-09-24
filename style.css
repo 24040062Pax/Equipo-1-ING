@@ -114,6 +114,16 @@
     flex-shrink:0;
   }
   .icon svg{ width:28px; height:28px; }
+  .icon-photo{
+    overflow:hidden;
+    padding:0;
+  }
+  .icon-photo img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    display:block;
+  }
   .track .idx{
     color: var(--gold);
     font-family:'Fraunces', serif;
