@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Dulce Daniela Vazquez Iracheta</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #fce4ec, #e8eaf6);
+            color: #333;
+            line-height: 1.6;
+        }
+
+        header {
+            background: #6a1b9a;
+            color: white;
+            text-align: center;
+            padding: 50px 20px;
+        }
+
+        header h1 {
+            font-size: 42px;
+            margin-bottom: 10px;
+        }
+
+        header p {
+            font-size: 20px;
+        }
+
+        nav {
+            background: #4a148c;
+            text-align: center;
+            padding: 15px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 20px;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            color: #f8bbd0;
+        }
+
+        .contenedor {
+            width: 85%;
+            max-width: 1000px;
+            margin: 40px auto;
+        }
+
+        section {
+            background: white;
+            padding: 30px;
+            margin-bottom: 30px;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        h2 {
+            color: #6a1b9a;
+            margin-bottom: 15px;
+            font-size: 28px;
+        }
+
+        .datos {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .dato {
+            background: #f3e5f5;
+            padding: 20px;
+            border-radius: 12px;
+            text-align: center;
+        }
+
+        .dato h3 {
+            color: #4a148c;
+            margin-bottom: 8px;
+        }
+
+        .gustos {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .gusto {
+            padding: 25px;
+            text-align: center;
+            background: #fce4ec;
+            border-radius: 15px;
+            font-size: 18px;
+            transition: transform 0.3s;
+        }
+
+        .gusto:hover {
+            transform: translateY(-5px);
+        }
+
+        .emoji {
+            font-size: 40px;
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        footer {
+            background: #4a148c;
+            color: white;
+            text-align: center;
+            padding: 25px;
+            margin-top: 40px;
+        }
+
+        footer p {
+            margin: 5px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>¡Hola! Soy Dulce Daniela</h1>
+        <p>Bienvenida/o a mi página personal ✨</p>
+    </header>
+
+    <nav>
+        <a href="#sobre-mi">Sobre mí</a>
+        <a href="#gustos">Mis gustos</a>
+        <a href="#metas">Mis intereses</a>
+    </nav>
+
+    <div class="contenedor">
+
+        <section id="sobre-mi">
+            <h2>👩‍💻 Sobre mí</h2>
+
+            <p>
+                Mi nombre es <strong>Dulce Daniela Vazquez Iracheta</strong>,
+                tengo 20 años y actualmente estudio una
+                <strong>Ingeniería en Redes</strong>.
+            </p>
+
+            <p>
+                Me considero una persona a la que le gusta aprender cosas nuevas,
+                disfrutar de buenos momentos y compartir tiempo con las personas
+                que quiero.
+            </p>
+
+            <div class="datos">
+
+                <div class="dato">
+                    <h3>👩 Nombre</h3>
+                    <p>Dulce Daniela Vazquez Iracheta</p>
+                </div>
+
+                <div class="dato">
+                    <h3>🎂 Edad</h3>
+                    <p>20 años</p>
+                </div>
+
+                <div class="dato">
+                    <h3>🎓 Carrera</h3>
+                    <p>Ingeniería en Redes</p>
+                </div>
+
+            </div>
+        </section>
+
+
+        <section id="gustos">
+
+            <h2>💜 Mis gustos</h2>
+
+            <p>
+                En mi tiempo libre disfruto realizar diferentes actividades
+                que me ayudan a divertirme, relajarme y aprender.
+            </p>
+
+            <div class="gustos">
+
+                <div class="gusto">
+                    <span class="emoji">📚</span>
+                    <strong>Leer</strong>
+                    <p>Me gusta disfrutar de la lectura y descubrir nuevas historias.</p>
+                </div>
+
+                <div class="gusto">
+                    <span class="emoji">🎵</span>
+                    <strong>Escuchar música</strong>
+                    <p>La música es una de mis formas favoritas de pasar el tiempo.</p>
+                </div>
+
+                <div class="gusto">
+                    <span class="emoji">🎮</span>
+                    <strong>Videojuegos</strong>
+                    <p>Me gusta jugar videojuegos y disfrutar de diferentes experiencias.</p>
+                </div>
+
+                <div class="gusto">
+                    <span class="emoji">🍫</span>
+                    <strong>Chocolate</strong>
+                    <p>¡Me encanta el chocolate!</p>
+                </div>
+
+                <div class="gusto">
+                    <span class="emoji">👭</span>
+                    <strong>Mis amigos</strong>
+                    <p>Disfruto mucho pasar tiempo con mis amigos.</p>
+                </div>
+
+                <div class="gusto">
+                    <span class="emoji">🧠</span>
+                    <strong>Aprender</strong>
+                    <p>Me gusta aprender cosas nuevas y seguir desarrollándome.</p>
+                </div>
+
+            </div>
+        </section>
+
+
+        <section id="metas">
+
+            <h2>🚀 Mis intereses</h2>
+
+            <p>
+                Uno de mis principales intereses es seguir aprendiendo y
+                desarrollando mis conocimientos en el área de redes.
+                Quiero adquirir nuevas habilidades que me ayuden tanto en
+                mi formación académica como en mi futuro profesional.
+            </p>
+
+            <p>
+                También quiero seguir disfrutando de mis pasatiempos,
+                conocer nuevas cosas y compartir momentos especiales
+                con mis amigos y personas importantes para mí.
+            </p>
+
+        </section>
+
+    </div>
+
+
+    <footer>
+        <p>© 2026 Dulce Daniela Vazquez Iracheta</p>
+        <p>Ingeniería en Redes 💻 | Aprendiendo cada día ✨</p>
+    </footer>
+
+</body>
+</html>
