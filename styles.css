@@ -108,3 +108,43 @@ footer {
   border-radius: 0 0 14px 14px;
   font-size: 0.9rem;
 }
+
+/* --- Animaciones --- */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes pulse {
+  0%, 100% { transform: scale(1); }
+  50%      { transform: scale(1.05); }
+}
+
+header h1 {
+  animation: fadeInUp 0.8s ease-out;
+}
+
+.subtitulo {
+  animation: fadeInUp 1s ease-out 0.2s backwards;
+}
+
+section {
+  animation: fadeInUp 0.8s ease-out 0.4s backwards;
+}
+
+.contacto li {
+  display: inline-block;
+  margin-right: 15px;
+  transition: transform 0.3s ease;
+}
+
+.contacto li:hover {
+  animation: pulse 0.6s infinite;
+  color: #1abc9c;
+}
