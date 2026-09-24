@@ -7,7 +7,7 @@
 
 body {
   font-family: 'Segoe UI', Tahoma, sans-serif;
-  background: #f5f3f7; /* blanco con un toque morado muy suave */
+  background: #f5f3f7;
   color: #333;
   line-height: 1.6;
   display: flex;
@@ -20,27 +20,26 @@ header, main, footer {
   width: 100%;
 }
 
-/* ===== Header (morado oscuro) ===== */
+/* ===== Header ===== */
 header {
   text-align: center;
   padding: 40px 30px;
-  background: #4a1e6b; /* morado oscuro */
+  background: #4a1e6b;
   color: #ffffff;
   border-radius: 14px 14px 0 0;
   box-shadow: 0 6px 18px rgba(74, 30, 107, 0.25);
 }
 
 header h1 {
-  font-size: 3rem;      /* título GRANDE */
+  font-size: 3rem;
   font-weight: 800;
   letter-spacing: 1px;
   margin-bottom: 8px;
 }
 
 .subtitulo {
-  color: #d4b8e8; /* lila claro sobre morado */
+  color: #d4b8e8;
   font-size: 1.15rem;
-  font-weight: 400;
 }
 
 /* ===== Main ===== */
@@ -50,7 +49,7 @@ main {
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
 }
 
-/* ===== Seccion tarjetas ===== */
+/* ===== Tarjetas ===== */
 .tarjetas {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -60,7 +59,7 @@ main {
 
 .tarjeta {
   background: #faf7fd;
-  border-left: 5px solid #6a2c94; /* acento morado */
+  border-left: 5px solid #6a2c94;
   border-radius: 10px;
   padding: 22px;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -97,6 +96,12 @@ main {
 .contacto li {
   padding: 6px 0;
   color: #444;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.contacto li:hover {
+  color: #6a2c94;
+  transform: translateX(6px);
 }
 
 /* ===== Footer ===== */
@@ -109,11 +114,14 @@ footer {
   font-size: 0.9rem;
 }
 
-/* --- Animaciones --- */
+/* =========================================
+   ANIMACIONES
+   ========================================= */
+
 @keyframes fadeInUp {
   from {
     opacity: 0;
-    transform: translateY(20px);
+    transform: translateY(25px);
   }
   to {
     opacity: 1;
@@ -121,30 +129,45 @@ footer {
   }
 }
 
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
 @keyframes pulse {
   0%, 100% { transform: scale(1); }
   50%      { transform: scale(1.05); }
 }
 
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50%      { transform: translateY(-6px); }
+}
+
+/* Animaciones aplicadas */
 header h1 {
-  animation: fadeInUp 0.8s ease-out;
+  animation: fadeInUp 0.8s ease-out both;
 }
 
 .subtitulo {
-  animation: fadeInUp 1s ease-out 0.2s backwards;
+  animation: fadeInUp 0.8s ease-out 0.2s both;
 }
 
-section {
-  animation: fadeInUp 0.8s ease-out 0.4s backwards;
+.tarjeta {
+  animation: fadeInUp 0.8s ease-out both;
 }
 
-.contacto li {
-  display: inline-block;
-  margin-right: 15px;
-  transition: transform 0.3s ease;
+.tarjeta:nth-child(1) { animation-delay: 0.3s; }
+.tarjeta:nth-child(2) { animation-delay: 0.5s; }
+
+.tarjeta:hover h2 {
+  animation: pulse 0.6s ease-in-out infinite;
 }
 
-.contacto li:hover {
-  animation: pulse 0.6s infinite;
-  color: #1abc9c;
+.contacto {
+  animation: fadeIn 1s ease-out 0.7s both;
+}
+
+footer {
+  animation: fadeIn 1s ease-out 1s both;
 }
