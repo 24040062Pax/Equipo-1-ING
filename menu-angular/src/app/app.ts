@@ -29,7 +29,7 @@ export class App {
       numero: '03',
       nombre: 'Naylea Aguilar',
       imagen: 'img/Naylea.jpeg',
-      carpeta: 'Naylea_Aguilar',
+      carpeta: 'Naylea-Aguilar',
       color: 'card-blush'
     },
     {
