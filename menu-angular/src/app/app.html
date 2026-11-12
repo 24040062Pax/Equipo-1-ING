@@ -1,0 +1,95 @@
+
+<div class="page-layout">
+
+  <aside class="sidebar">
+    <a href="#inicio" class="sidebar-star">✦</a>
+
+    <h1 class="vertical-title">EQUIPO 1</h1>
+
+    <div class="sidebar-bottom">
+      <span class="sidebar-line"></span>
+      <span class="people-icon">♟</span>
+    </div>
+  </aside>
+
+  <main class="main-content" id="inicio">
+
+    <header class="topbar">
+      <p class="course-name">Curso de Ingeniería</p>
+      <p class="university-name">UTC</p>
+    </header>
+
+    <section class="team-section" id="integrantes">
+
+      <div class="section-intro">
+        <p class="eyebrow">CONOCE A NUESTRO EQUIPO</p>
+
+        <h2>
+          Un espacio para <span>cada personalidad.</span>
+        </h2>
+
+        <p class="intro-description">
+          Cinco integrantes, distintas ideas y un proyecto compartido.
+        </p>
+      </div>
+
+      <div class="team-list">
+
+        @for (integrante of integrantes; track integrante.numero) {
+
+          <article class="member-card" [class]="integrante.color">
+
+            <div class="profile-image">
+              <img
+                [src]="integrante.imagen"
+                [alt]="'Fotografía de ' + integrante.nombre"
+                class="profile-photo">
+            </div>
+
+            <div class="card-divider"></div>
+
+            <div class="member-info">
+
+              <span class="member-number">
+                {{ integrante.numero }} / INTEGRANTE
+              </span>
+
+              <h3>{{ integrante.nombre }}</h3>
+
+              <p>Conoce su presentación personal.</p>
+
+              <a
+                [href]="'/' + integrante.carpeta + '/index.html'"
+                class="profile-link">
+                Ver presentación <span>⟶</span>
+              </a>
+
+            </div>
+
+            <a
+              [href]="'/' + integrante.carpeta + '/index.html'"
+              class="arrow-button"
+              [attr.aria-label]="'Ver presentación de ' + integrante.nombre">
+              →
+            </a>
+
+          </article>
+
+        }
+
+      </div>
+
+    </section>
+
+    <footer class="footer">
+      <p>
+        Todos diferentes, todos importantes, un mismo equipo.
+        <span>★</span>
+      </p>
+
+      <p>Actividad 9 · Proyecto colaborativo</p>
+    </footer>
+
+  </main>
+
+</div>

@@ -1,0 +1,16 @@
+
+services:
+
+  equipo-web:
+    build:
+      context: .
+      dockerfile: Dockerfile
+
+    image: equipo-1-angular:1.0
+
+    container_name: equipo-1-web
+
+    ports:
+      - "8080:80"
+
+    restart: unless-stopped
