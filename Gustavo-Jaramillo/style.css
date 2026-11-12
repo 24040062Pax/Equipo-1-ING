@@ -1,34 +1,185 @@
+
+/* ===== ESTILO GENERAL ===== */
+
+* {
+    box-sizing: border-box;
+}
+
 body {
-    background-color: #111111;
-    color: white;
+    margin: 0;
+    min-height: 100vh;
+    padding: 60px 24px 30px;
+
     font-family: Georgia, serif;
+    color: #f8f4ff;
     text-align: center;
-    padding: 60px 20px;
+
+    background:
+        radial-gradient(ellipse at top left,
+            #39275f 0%, transparent 45%),
+        radial-gradient(ellipse at bottom right,
+            #164b64 0%, transparent 45%),
+        linear-gradient(135deg, #111426, #1b1935 60%, #101c2b);
+
+    overflow-x: hidden;
+}
+
+/* ===== CONTENEDOR PRINCIPAL ===== */
+
+.contenedor {
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+    position: relative;
+}
+
+/* ===== ENCABEZADO ===== */
+
+.encabezado {
+    margin-bottom: 55px;
+    animation: aparecer 1.5s ease;
+}
+
+.etiqueta {
+    color: #f0c987;
+    font-size: 13px;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    margin-bottom: 25px;
 }
 
 h1 {
-    font-size: 60px;
-    margin-bottom: 50px;
+    font-size: clamp(40px, 7vw, 68px);
+    margin: 0 0 20px;
+    letter-spacing: 1px;
+    text-shadow: 0 0 30px #b58aff35;
 }
+
+h1 span {
+    color: #d6a9ff;
+}
+
+.introduccion {
+    color: #c8c5df;
+    font-size: 19px;
+    font-style: italic;
+}
+
+/* ===== TARJETAS ===== */
+
+.tarjetas {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 28px;
+}
+
+.tarjeta {
+    position: relative;
+    padding: 38px 28px;
+    border-radius: 22px;
+    border: 1px solid #ffffff20;
+
+    background: #ffffff0b;
+    backdrop-filter: blur(8px);
+
+    box-shadow: 0 12px 35px #00000025;
+
+    transition:
+        transform 0.35s ease,
+        box-shadow 0.35s ease,
+        border-color 0.35s ease;
+
+    animation: subir 1.2s ease both;
+}
+
+.tarjeta-piano {
+    animation-delay: 0.2s;
+}
+
+.tarjeta:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 18px 40px #00000045;
+    border-color: #d6a9ff80;
+}
+
+/* Colores diferentes para cada tema */
+
+.tarjeta-musica {
+    border-top: 3px solid #63d8d0;
+}
+
+.tarjeta-piano {
+    border-top: 3px solid #d6a9ff;
+}
+
+/* ===== ICONOS MUSICALES ===== */
+
+.icono {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 76px;
+    height: 76px;
+    margin: 0 auto 25px;
+
+    border-radius: 50%;
+    font-size: 43px;
+
+    color: #ffffff;
+    background: linear-gradient(135deg, #287d88, #514078);
+    box-shadow: 0 0 25px #8f7be52a;
+}
+
+.tarjeta-piano .icono {
+    background: linear-gradient(135deg, #784da4, #c16b9a);
+}
+
+/* ===== TEXTOS ===== */
 
 h2 {
-    font-size: 28px;
-    margin-top: 40px;
+    font-size: 25px;
+    line-height: 1.4;
+    margin: 0 0 18px;
+    color: #e5d1ff;
 }
 
-p {
-    font-size: 18px;
-    color: #cccccc;
+.tarjeta-musica h2 {
+    color: #8ce8df;
 }
 
-h1 {
-    animation: aparecer 2s ease-in-out;
+.tarjeta p {
+    color: #d0cee0;
+    font-size: 17px;
+    line-height: 1.8;
+    margin-bottom: 25px;
 }
+
+/* ===== NOTAS DECORATIVAS ===== */
+
+.decoracion {
+    color: #f0c987;
+    font-size: 25px;
+    letter-spacing: 12px;
+    opacity: 0.85;
+    margin-top: 25px;
+}
+
+/* ===== PIE DE PÁGINA ===== */
+
+footer {
+    margin-top: 55px;
+    color: #a9a5c5;
+    font-size: 14px;
+    letter-spacing: 1px;
+}
+
+/* ===== ANIMACIONES ===== */
 
 @keyframes aparecer {
     from {
         opacity: 0;
-        transform: translateY(-20px);
+        transform: translateY(-25px);
     }
 
     to {
@@ -37,10 +188,67 @@ h1 {
     }
 }
 
-h2 {
-    transition: transform 0.3s;
+@keyframes subir {
+    from {
+        opacity: 0;
+        transform: translateY(25px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
-h2:hover {
-    transform: scale(1.05);
+/* ===== DISEÑO PARA CELULARES ===== */
+
+@media (max-width: 650px) {
+    body {
+        padding: 45px 18px 25px;
+    }
+
+    .encabezado {
+        margin-bottom: 38px;
+    }
+
+    .etiqueta {
+        font-size: 11px;
+        letter-spacing: 3px;
+    }
+
+    .introduccion {
+        font-size: 17px;
+    }
+
+    .tarjetas {
+        grid-template-columns: 1fr;
+        gap: 22px;
+    }
+
+    .tarjeta {
+        padding: 30px 22px;
+    }
+
+    h2 {
+        font-size: 23px;
+    }
+
+    .tarjeta p {
+        font-size: 16px;
+    }
+
+    footer {
+        margin-top: 38px;
+    }
+}
+
+/* Respetar la preferencia de movimiento del usuario */
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation: none !important;
+        transition: none !important;
+    }
 }
