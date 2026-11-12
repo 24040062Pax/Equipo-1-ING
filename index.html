@@ -1,262 +1,210 @@
+
+
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="img/Favicon.jpg" type="image/x-icon">
+    <title>Equipo 1 | Curso de Ingeniería</title>
 
-    <title>Dulce Daniela Vazquez Iracheta</title>
-    <link rel="stylesheet" href="style.css">
-    
+    <link rel="stylesheet" href="css/home.css">
+    <script src="js/home.js" defer></script>
 </head>
-
-
 <body>
 
-    <header>
+    <div class="page-layout">
 
-        <h1>¡Hola! Soy Dulce Daniela</h1>
+        <aside class="sidebar">
+            <a href="#inicio" class="sidebar-star" aria-label="Ir al inicio">✦</a>
 
-        <p>
-            Bienvenida/o a mi página personal ✨
-        </p>
+            <h1 class="vertical-title">EQUIPO 1</h1>
 
-    </header>
-
-    <nav>
-
-        <a href="#sobre-mi">Sobre mí</a>
-
-        <a href="#gustos">Mis gustos</a>
-
-        <a href="#intereses">Mis intereses</a>
-
-    </nav>
-
-
-    <!-- CONTENIDO PRINCIPAL -->
-    <div class="contenedor">
-
-
-        <!-- SOBRE MÍ -->
-        <section id="sobre-mi">
-
-            <h2>👩‍💻 Sobre mí</h2>
-
-            <p>
-                Mi nombre es
-                <strong>Dulce Daniela Vazquez Iracheta</strong>,
-                tengo 20 años y actualmente estudio una
-                <strong>Ingeniería en Redes</strong>.
-            </p>
-
-            <br>
-
-            <p>
-                Me considero una persona a la que le gusta aprender
-                cosas nuevas, disfrutar de buenos momentos y compartir
-                tiempo con las personas que quiero.
-            </p>
-
-
-            <!-- DATOS -->
-            <div class="datos">
-
-                <div class="dato">
-
-                    <h3>👩 Nombre</h3>
-
-                    <p>
-                        Dulce Daniela Vazquez Iracheta
-                    </p>
-
-                </div>
-
-
-                <div class="dato">
-
-                    <h3>🎂 Edad</h3>
-
-                    <p>
-                        20 años
-                    </p>
-
-                </div>
-
-
-                <div class="dato">
-
-                    <h3>🎓 Carrera</h3>
-
-                    <p>
-                        Ingeniería en Redes
-                    </p>
-
-                </div>
-
+            <div class="sidebar-bottom">
+                <span class="sidebar-line"></span>
+                <span class="people-icon" aria-hidden="true">♟</span>
             </div>
+        </aside>
 
-        </section>
+        <main class="main-content" id="inicio">
 
+            <header class="topbar">
+                <p class="course-name">Curso de Ingeniería</p>
+                <p class="university-name">UTC</p>
+            </header>
 
-        <!-- FOTO -->
-        <section class="foto">
+            <section class="team-section" id="integrantes">
 
-            <h2>✨ Una imagen que me gusta</h2>
-
-            <img src="musica.jpeg" alt="Fotografía">
-
-        </section>
-
-
-        <!-- MIS GUSTOS -->
-        <section id="gustos">
-
-            <h2>💜 Mis gustos</h2>
-
-            <p>
-                En mi tiempo libre disfruto realizar diferentes
-                actividades que me ayudan a divertirme, relajarme
-                y aprender.
-            </p>
-
-
-            <div class="gustos">
-
-
-                <!-- LEER -->
-                <div class="gusto">
-
-                    <span class="emoji">📚</span>
-
-                    <strong>Leer</strong>
-
-                    <p>
-                        Me gusta disfrutar de la lectura y descubrir
-                        nuevas historias.
+                <div class="section-intro">
+                    <p class="eyebrow">CONOCE A NUESTRO EQUIPO</p>
+                    <h2>Un espacio para <span>cada personalidad.</span></h2>
+                    <p class="intro-description">
+                        Cinco integrantes, distintas ideas y un proyecto compartido.
                     </p>
-
                 </div>
 
+                <div class="team-list">
 
-                <!-- MÚSICA -->
-                <div class="gusto">
+                    <!-- Integrante 1: Dulce -->
+                    <article class="member-card card-rose">
+                        <div class="profile-image">
+                            <img
+                                src="img/Dulce.jpeg"
+                                alt="Fotografía elegida por Dulce"
+                                class="profile-photo"
+                                loading="lazy"
+                            >
+                        </div>
 
-                    <span class="emoji">🎵</span>
+                        <div class="card-divider"></div>
 
-                    <strong>Escuchar música</strong>
+                        <div class="member-info">
+                            <span class="member-number">01 / INTEGRANTE</span>
+                            <h3>Dulce Vázquez</h3>
+                            <p>Conoce su presentación personal.</p>
 
-                    <p>
-                        La música es una de mis formas favoritas
-                        de pasar el tiempo.
-                    </p>
+                            <a href="Dulce_Vazquez/index.html" class="profile-link">
+                                Ver presentación <span>⟶</span>
+                            </a>
+                        </div>
+
+                        <a
+                            href="Dulce_Vazquez/index.html"
+                            class="arrow-button"
+                            aria-label="Ver presentación de Dulce"
+                        >→</a>
+                    </article>
+
+                    <!-- Integrante 2: Paola -->
+                    <article class="member-card card-lavender">
+                        <div class="profile-image">
+                            <img
+                                src="img/Paola.jpg"
+                                alt="Fotografía elegida por Paola"
+                                class="profile-photo"
+                                loading="lazy"
+                            >
+                        </div>
+
+                        <div class="card-divider"></div>
+
+                        <div class="member-info">
+                            <span class="member-number">02 / INTEGRANTE</span>
+                            <h3>Paola Pérez</h3>
+                            <p>Conoce su presentación personal.</p>
+
+                            <a href="Paola-Perez/index.html" class="profile-link">
+                                Ver presentación <span>⟶</span>
+                            </a>
+                        </div>
+
+                        <a
+                            href="Paola-Perez/index.html"
+                            class="arrow-button"
+                            aria-label="Ver presentación de Paola"
+                        >→</a>
+                    </article>
+
+                    <!-- Integrante 3: Naylea -->
+                    <article class="member-card card-blush">
+                        <div class="profile-image">
+                            <img
+                                src="img/Naylea.jpeg"
+                                alt="Fotografía elegida por Naylea"
+                                class="profile-photo"
+                                loading="lazy"
+                            >
+                        </div>
+
+                        <div class="card-divider"></div>
+
+                        <div class="member-info">
+                            <span class="member-number">03 / INTEGRANTE</span>
+                            <h3>Naylea Aguilar</h3>
+                            <p>Conoce su presentación personal.</p>
+
+                            <a href="Naylea_Aguilar/index.html" class="profile-link">
+                                Ver presentación <span>⟶</span>
+                            </a>
+                        </div>
+
+                        <a
+                            href="Naylea_Aguilar/index.html"
+                            class="arrow-button"
+                            aria-label="Ver presentación de Naylea"
+                        >→</a>
+                    </article>
+
+                    <!-- Integrante 4: Gustavo -->
+                    <article class="member-card card-periwinkle">
+                        <div class="profile-image">
+                            <img
+                                src="img/Gustavo.jpeg"
+                                alt="Fotografía elegida por Gustavo"
+                                class="profile-photo"
+                                loading="lazy"
+                            >
+                        </div>
+
+                        <div class="card-divider"></div>
+
+                        <div class="member-info">
+                            <span class="member-number">04 / INTEGRANTE</span>
+                            <h3>Gustavo Jaramillo</h3>
+                            <p>Conoce su presentación personal.</p>
+
+                            <a href="Gustavo-Jaramillo/index.html" class="profile-link">
+                                Ver presentación <span>⟶</span>
+                            </a>
+                        </div>
+
+                        <a
+                            href="Gustavo-Jaramillo/index.html"
+                            class="arrow-button"
+                            aria-label="Ver presentación de Gustavo"
+                        >→</a>
+                    </article>
+
+                    <!-- Integrante 5: Karol -->
+                    <article class="member-card card-grape">
+                        <div class="profile-image">
+                            <img
+                                src="img/Karol.jpeg"
+                                alt="Fotografía elegida por Karol"
+                                class="profile-photo"
+                                loading="lazy"
+                            >
+                        </div>
+
+                        <div class="card-divider"></div>
+
+                        <div class="member-info">
+                            <span class="member-number">05 / INTEGRANTE</span>
+                            <h3>Karol Vázquez</h3>
+                            <p>Conoce su presentación personal.</p>
+
+                            <a href="Karol-Vazquez/index.html" class="profile-link">
+                                Ver presentación <span>⟶</span>
+                            </a>
+                        </div>
+
+                        <a
+                            href="Karol-Vazquez/index.html"
+                            class="arrow-button"
+                            aria-label="Ver presentación de Karol"
+                        >→</a>
+                    </article>
 
                 </div>
+            </section>
 
+            <footer class="footer">
+                <p>Todos diferentes, todos importantes, un mismo equipo. <span>★</span></p>
+                <p>Actividad 5 · Proyecto colaborativo</p>
+            </footer>
 
-                <!-- VIDEOJUEGOS -->
-                <div class="gusto">
-
-                    <span class="emoji">🎮</span>
-
-                    <strong>Videojuegos</strong>
-
-                    <p>
-                        Me gusta jugar videojuegos y disfrutar
-                        de diferentes experiencias.
-                    </p>
-
-                </div>
-
-
-                <!-- CHOCOLATE -->
-                <div class="gusto">
-
-                    <span class="emoji">🍫</span>
-
-                    <strong>Chocolate</strong>
-
-                    <p>
-                        ¡Me encanta el chocolate!
-                    </p>
-
-                </div>
-
-
-                <!-- AMIGOS -->
-                <div class="gusto">
-
-                    <span class="emoji">👭</span>
-
-                    <strong>Mis amigos</strong>
-
-                    <p>
-                        Disfruto mucho pasar tiempo con mis amigos.
-                    </p>
-
-                </div>
-
-
-                <!-- APRENDER -->
-                <div class="gusto">
-
-                    <span class="emoji">🧠</span>
-
-                    <strong>Aprender</strong>
-
-                    <p>
-                        Me gusta aprender cosas nuevas y seguir
-                        desarrollándome.
-                    </p>
-
-                </div>
-
-
-            </div>
-
-        </section>
-
-
-        <!-- INTERESES -->
-        <section id="intereses">
-
-            <h2>🚀 Mis intereses</h2>
-
-            <p>
-                Uno de mis principales intereses es seguir aprendiendo
-                y desarrollando mis conocimientos en el área de redes.
-                Quiero adquirir nuevas habilidades que me ayuden tanto
-                en mi formación académica como en mi futuro profesional.
-            </p>
-
-            <br>
-
-            <p>
-                También quiero seguir disfrutando de mis pasatiempos,
-                conocer nuevas cosas y compartir momentos especiales
-                con mis amigos y las personas importantes para mí.
-            </p>
-
-        </section>
-
-
+        </main>
     </div>
 
-
-    <!-- PIE DE PÁGINA -->
-    <footer>
-
-        <p>
-            © 2026 Dulce Daniela Vazquez Iracheta
-        </p>
-
-        <p>
-            Ingeniería en Redes 💻 | Aprendiendo cada día ✨
-        </p>
-
-    </footer>
-
-
 </body>
-
 </html>
