@@ -45,6 +45,7 @@ COPY --from=build /app/dist/menu-angular/browser/ /usr/share/nginx/html/
 COPY --from=source /repo/Dulce_Vazquez/ /usr/share/nginx/html/Dulce_Vazquez/
 COPY --from=source /repo/Paola-Perez/ /usr/share/nginx/html/Paola-Perez/
 COPY --from=source /repo/Naylea-Aguilar/ /usr/share/nginx/html/Naylea-Aguilar/
+COPY --from=source /repo/Gustavo-Jaramillo/ /usr/share/nginx/html/Gustavo-Jaramillo/
 COPY --from=source /repo/Karol-Vazquez/ /usr/share/nginx/html/Karol-Vazquez/
 
 EXPOSE 80
